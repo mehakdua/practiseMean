@@ -1,0 +1,8 @@
+<input type ="text" name="genre" ng-model="name"/>
+<button ng-click="addGenre()"> Add Genre</button>
+<div ng-repeat="genre in genres">{{genre.name}}
+<button ng-click="editGenre(genre)"> Edit Genre</button>
+<button ng-click="deleteGenre(genre)">Delete</button></div>
+
+<input type="text" name="updatedVal" ng-model="updatedVal">
+<button ng-click="modifyGenre()"> Edit Genre</button>

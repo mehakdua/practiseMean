@@ -11,9 +11,8 @@ db.once('open', function() {
   console.log("connected");
 });
 app.use(bodyParser.json());
-app.get("/",function(req,res){
-	res.send("hello worldd");
-});
+app.use(express.static(__dirname+"/public"));
+
 //Get Genres
 app.get("/api/genres",function(req,res){
 	Genre.getGenres(function(err,genres){
