@@ -4,14 +4,17 @@
  * @name sampleApp
  * @description
  * # sampleApp
- *
+ *appModule.config(['$locationProvider', function($locationProvider) {
+  $locationProvider.hashPrefix('');
+}]);
  * Main module of the application.
  */
 angular
   .module('meanapp', [
-    'ngRoute',
+    'ngRoute'
   ])
-  .config(function ($routeProvider) {
+  .config(['$routeProvider','$locationProvider',function ($routeProvider,$locationProvider) {
+  	 $locationProvider.hashPrefix('');
     $routeProvider
       .when('/', {
         templateUrl: 'views/genres.html',
@@ -23,5 +26,5 @@ angular
       })
       .otherwise({
         redirectTo: '/'
-      });
-  });
+      })
+  }]);

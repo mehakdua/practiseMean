@@ -1,8 +1,10 @@
 var app =angular.module('meanapp');
-app.service('GenreService',function($http){
+
+app.service('GenreService',['$http',function($http){
   this.getGenres = function(callback){
   	$http({ method: 'GET',url: '/api/genres'}).then(function(response){
   		callback(response);
+  		console.log('in');
   	});
   }
   this.addGenre = function(genre, callback){
@@ -22,4 +24,4 @@ app.service('GenreService',function($http){
   		callback(response);
   	});
   }
-})
+}])

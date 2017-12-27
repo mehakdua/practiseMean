@@ -1,9 +1,9 @@
 var app =angular.module('meanapp');
-app.controller('GenreListController',function($scope,GenreService){
+app.controller('GenreListController',['$scope','GenreService',function($scope,GenreService){
   function init(){
   	GenreService.getGenres(function(response){
   		$scope.genres = response.data;
-  	})
+  	});
   }
   $scope.addGenre  = function(){
   	GenreService.addGenre($scope.name,function(response){
@@ -23,8 +23,7 @@ app.controller('GenreListController',function($scope,GenreService){
   $scope.deleteGenre = function(genre){
   	GenreService.deleteGenre(genre._id,function(response){
   		init();
-  		//$scope.genres.push({name:$scope.name});
   	})
   } 
   init();
-})
+}])
