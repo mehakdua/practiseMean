@@ -5,7 +5,12 @@ var bodyParser= require("body-parser");
 var Genre = require("./models/genres");
 var Book = require("./models/books");
 //mongoose.connect('mongodb://localhost/bookstore');
-mongoose.connect('mongodb://mehak:mehak@ds133547.mlab.com:33547/bookstore');
+//mongoose.connect('mongodb://mehak:mehak@ds133547.mlab.com:33547/bookstore');
+if(process.env.NODE_ENV == "production"){
+  mongoose.connect('mongodb://mehak:mehak@ds133547.mlab.com:33547/bookstore');
+}else{
+  mongoose.connect('mongodb://localhost/bookstore');
+}
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
@@ -73,4 +78,4 @@ app.get("/api/books",function(req,res){
 		res.json(books);
 	})
 });
-app.listen(3000, () => console.log('Example app listening on port'+port));
+app.listen(port, () => console.log('Example app listening on port'+port));
