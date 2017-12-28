@@ -4,7 +4,8 @@ var mongoose =require("mongoose");
 var bodyParser= require("body-parser");
 var Genre = require("./models/genres");
 var Book = require("./models/books");
-mongoose.connect('mongodb://localhost/bookstore');
+//mongoose.connect('mongodb://localhost/bookstore');
+mongoose.connect('mongodb://mehak:mehak@ds133547.mlab.com:33547/bookstore');
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
@@ -12,7 +13,7 @@ db.once('open', function() {
 });
 app.use(bodyParser.json());
 app.use(express.static(__dirname+"/public"));
-
+var port = process.env.PORT ||3000;
 //Get Genres
 app.get("/api/genres",function(req,res){
 	Genre.getGenres(function(err,genres){
@@ -72,4 +73,4 @@ app.get("/api/books",function(req,res){
 		res.json(books);
 	})
 });
-app.listen(3000, () => console.log('Example app listening on port 3000!'));
+app.listen(3000, () => console.log('Example app listening on port'+port));
