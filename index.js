@@ -17,7 +17,7 @@ db.once('open', function() {
   console.log("connected");
 });
 app.use(bodyParser.json());
-app.use(express.static(__dirname+"/public"));
+app.use(express.static(__dirname+"/public/build/"));
 var port = process.env.PORT ||3000;
 //Get Genres
 app.get("/api/genres",function(req,res){

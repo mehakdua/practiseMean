@@ -8,7 +8,7 @@ app.controller('GenreListController',['$scope','GenreService',function($scope,Ge
   $scope.addGenre  = function(){
   	GenreService.addGenre($scope.name,function(response){
   		$scope.genres.push(response.data);
-  	})
+  	});
   }
   $scope.editGenre = function(genre){
   	$scope.oldVal = genre._id;

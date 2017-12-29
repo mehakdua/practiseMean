@@ -4,7 +4,6 @@ app.service('GenreService',['$http',function($http){
   this.getGenres = function(callback){
   	$http({ method: 'GET',url: '/api/genres'}).then(function(response){
   		callback(response);
-  		console.log('in');
   	});
   }
   this.addGenre = function(genre, callback){
