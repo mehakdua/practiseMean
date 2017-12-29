@@ -6,7 +6,7 @@
   "scripts": {
     "postinstall": "grunt",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "nodemon server.js"
+    "serve": "node index.js"
   },
   "author": "",
   "license": "ISC",
@@ -15,16 +15,17 @@
     "express": "^4.16.2",
     "grunt": "^1.0.1",
     "grunt-clean": "^0.4.0",
+    "grunt-cli": "^1.2.0",
     "grunt-concurrent": "^2.3.1",
     "grunt-contrib-clean": "^1.1.0",
     "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-jshint": "^1.1.0",
     "grunt-contrib-uglify": "^3.2.1",
     "grunt-contrib-watch": "^1.0.0",
     "mongoose": "^4.13.7"
   },
   "devDependencies": {
-    "grunt-contrib-copy": "^1.0.0",
     "grunt-nodemon": "^0.4.2"
   }
 }
