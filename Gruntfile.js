@@ -49,18 +49,7 @@ module.exports = function (grunt) {
 				src:['public/build/css/app.min.css'], 
 				dest:'public/build/css/app.min.css'
 			}
-		},
-	
-		watch:{
-			js:{
-				files:['public/**/*.js'],
-				tasks:['clean:js','concat:js','uglify']	
-			},
-			css:{
-				files:['public/**/*.css'],
-				tasks:['clean:css','concat:css','cssmin']
-			}
-		},
+		}
 
 	});
 	// body...
