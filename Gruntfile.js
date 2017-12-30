@@ -33,6 +33,10 @@ module.exports = function (grunt) {
 			css:{
 				src:['public/**/*.css'],
 				dest:'public/build/css/app.min.css'
+			},
+			libs:{
+				src:['bower_components/angular/angular.js','bower_components/angular-route/angular-route.js'],
+				dest:'public/build/js/vendor.min.js'
 			}
 		},
 	    jshint: {
@@ -42,6 +46,10 @@ module.exports = function (grunt) {
 			js:{
 				src:['public/build/js/app.min.js'],
 				dest:'public/build/js/app.min.js'
+			},
+			libs:{
+				src:['public/build/js/vendor.min.js'],
+				dest:'public/build/js/vendor.min.js'
 			}
 		},
 		cssmin:{
