@@ -4,11 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-<<<<<<< HEAD
     "postinstall": "./node_modules/bower/bin/bower install && grunt",
-=======
-    "postinstall": "grunt",
->>>>>>> 2e1ca5fd9fa89cd849186802d9a449f4317f6673
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "node index.js"
   },
@@ -28,15 +24,9 @@
     "grunt-contrib-jshint": "^1.1.0",
     "grunt-contrib-uglify": "^3.2.1",
     "grunt-contrib-watch": "^1.0.0",
-<<<<<<< HEAD
     "mongoose": "^4.13.7",
      "bower": "*"
   },
-=======
-    "mongoose": "^4.13.7"
-  },
-  
->>>>>>> 2e1ca5fd9fa89cd849186802d9a449f4317f6673
   "devDependencies": {
     "grunt-nodemon": "^0.4.2"
   }
