@@ -35,7 +35,6 @@ module.exports = function (grunt) {
 				dest:'public/build/css/app.min.css'
 			},
 			libs:{
-				//src:['https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js']
 				src:['bower_components/angular/angular.js','bower_components/angular-route/angular-route.js'],
 				dest:'public/build/js/vendor.min.js'
 			}
