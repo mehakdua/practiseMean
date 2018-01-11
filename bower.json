@@ -1,0 +1,21 @@
+{
+  "name": "practisemean",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "mehakdua <mdua798@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.8",
+    "angular-route": "^1.6.8"
+  }
+}
